@@ -1,29 +1,27 @@
 install two gems
 
-````
    gem 'pdfkit'
    gem "wkhtmltopdf" 
 
-````
 
 then in application.rb inside application class
- ````
+
       config.middleware.use "PDFKit::Middleware", :print_media_type => true
 
-````
+
 
 and in development.rb
 
-````
+
       config.action_controller.asset_host = "http://localhost"
 
-````
+
 
 thats all to create a pdf of any page simple add extension .pdf in address bar
 
 in layout/application   
-````
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-````
+
 
 then you can do all your customization with your pdf using @media in your css file
